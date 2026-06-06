@@ -3,87 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StyleWear - Clothing Brand</title>
+<title>ProMarket - Online Marketing</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
-  background: #f5f5f5;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
 }
 
 /* Navbar */
-header {
+.navbar {
   background: #111;
   color: white;
-  padding: 15px 30px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header h1 {
-  font-size: 24px;
-}
-
-nav a {
+.navbar a {
   color: white;
-  margin-left: 20px;
+  margin: 0 10px;
   text-decoration: none;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
-  background: url('https://images.unsplash.com/photo-1521334884684-d80222895322') center/cover;
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(to right, #007bff, #00c6ff);
   color: white;
   text-align: center;
+  padding: 80px 20px;
 }
 
-.hero h2 {
+.hero h1 {
   font-size: 40px;
-  background: rgba(0,0,0,0.6);
+}
+
+.btn {
+  background: white;
+  color: #007bff;
   padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
-/* Products */
-.products {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.products h2 {
-  margin-bottom: 30px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+/* Services */
+.services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px;
 }
 
 .card {
   background: white;
-  padding: 15px;
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.card img {
-  width: 100%;
-  border-radius: 10px;
+/* Contact */
+.contact {
+  background: white;
+  padding: 40px;
+  text-align: center;
 }
 
-.card h3 {
+input, textarea {
+  width: 80%;
+  padding: 10px;
   margin: 10px 0;
+}
+
+button.submit {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
 }
 
 /* Footer */
@@ -92,55 +93,63 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
-  margin-top: 20px;
 }
 </style>
-
 </head>
 
 <body>
 
-<header>
-  <h1>StyleWear</h1>
-  <nav>
+<div class="navbar">
+  <div><b>ProMarket</b></div>
+  <div>
     <a href="#">Home</a>
-    <a href="#">Shop</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
 
-<section class="hero">
-  <h2>New Fashion Collection 2026</h2>
+<div class="hero">
+  <h1>Grow Your Business Online</h1>
+  <p>We help you with SEO, Social Media Marketing & Ads</p>
+  <button class="btn" onclick="showAlert()">Get Started</button>
+</div>
+
+<section id="services" class="services">
+
+  <div class="card">
+    <h3>SEO Marketing</h3>
+    <p>Rank your website on Google and get more traffic.</p>
+  </div>
+
+  <div class="card">
+    <h3>Social Media Ads</h3>
+    <p>Run ads on Facebook, Instagram and grow fast.</p>
+  </div>
+
+  <div class="card">
+    <h3>Email Marketing</h3>
+    <p>Reach customers directly through emails.</p>
+  </div>
+
 </section>
 
-<section class="products">
-  <h2>Our Products</h2>
-
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38" alt="">
-      <h3>T-Shirt</h3>
-      <p>Rs 1200</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1520975682031-ae67c7c8f2d8" alt="">
-      <h3>Hoodie</h3>
-      <p>Rs 2500</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1520974735194-6e6c8c6b0b0f" alt="">
-      <h3>Jacket</h3>
-      <p>Rs 3500</p>
-    </div>
-  </div>
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <input type="text" placeholder="Your Name"><br>
+  <input type="email" placeholder="Your Email"><br>
+  <textarea placeholder="Your Message"></textarea><br>
+  <button class="submit">Send Message</button>
 </section>
 
 <footer>
-  <p>© 2026 StyleWear. All Rights Reserved.</p>
+  © 2026 ProMarket | All Rights Reserved
 </footer>
 
+<script>
+function showAlert() {
+  alert("Welcome! We will help grow your business 🚀");
+}
+</script>
+
 </body>
-</html>
+</html> 
